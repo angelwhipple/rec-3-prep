@@ -11,7 +11,7 @@ class Routes {
 
   @Router.post("/login")
   async logIn(session: SessionDoc, username: string) {
-    // We don't have any authentication yet, we can imagine it would by synchronized here
+    // We don't have any authentication yet, we can imagine it would be synchronized here
     Sessioning.start(session, username);
     return { msg: "Logged in!", user: username };
   }
